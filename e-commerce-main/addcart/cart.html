@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="image/shopicon.png">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <div id="cart-container">
+    <h2>Your Cart</h2>
+    
+    <!-- Cart Items List -->
+    <ul id="cart-items"></ul>
+    
+    <!-- Total Price -->
+    <p>Delivery: $<span id="delivery">3.00</span></p>
+    <p>Total: $<span id="total">0.00</span></p>
+
+    <!-- Discount Section -->
+    <div id="discount-section">
+      <label for="coupon-code">Enter Coupon Code:</label>
+      <input type="text" id="coupon-code" placeholder="e.g., SAVE10">
+      <button id="apply-coupon">Apply Coupon</button>
+      <p id="discount-message"></p>
+    </div>
+
+    <!-- Checkout Section -->
+    <h3>Checkout</h3>
+    <form id="checkout-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="address">Shipping Address:</label>
+      <textarea id="address" required></textarea>
+
+      <label for="payment-method">Payment Method:</label>
+      <select id="payment-method">
+        <option value="credit-card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+      </select>
+
+      <button type="button" id="checkout-button">Place Order</button>
+    </form>
+
+    <!-- Action Buttons -->
+    <div class="clear-return">
+      <button id="clear-cart">Clear Cart</button>
+      <button onclick="returnToHome()">Return to Home</button>
+    </div>
+  </div>
+
+  <!-- Link to Your JavaScript File -->
+  <script src="cart.js"></script>
+</body>
+</html>

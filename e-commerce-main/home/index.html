@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple - Just Do It</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/phoneicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section>
+        <nav>
+            <div class="logo">
+                <h1>Iphon<span>e</span></h1>
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Servises">Servises</a></li>
+            </ul>
+
+            <div class="icons">
+                <button id="whishlist-icon" class="res" onclick="navigateToWishlist()">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+                <button id="cart-icon" class="res" onclick="navigateToCart()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <i class="fa-solid fa-user" id="icon"></i>
+            </div>
+
+        </nav>
+        
+        <div id="buttonContainer">
+            <a href="../login/login.html" class="btn-login" id="loginButton">Login</a>
+            <a href="../register/register.html" class="btn-login" id="registerButton">Register</a>
+            <span id="usernameDisplay" style="display: none;">Welcome,<br> <span id="username"></span></span>
+            <a href="#" class="btn-logout" id="logoutButton" style="display: none;">Logout</a>
+        </div>
+
+        <div class="main" id="Home">
+            <div class="main_content">
+                <div class="main_text">
+                    <h1>IPHONE  <br><span>Collection</span></h1>
+                    <p>
+                        The IPhone is a line of smartphones developed and marketed by Apple that run iOS, the company's own mobile operating system. 
+                        The first-generation iPhone was announced by then–Apple CEO Steve Jobs on January 9, 2007, at Macworld 2007, and launched later that year. 
+                        Since then, Apple has annually released new iPhone models and iOS versions; the most recent models being the iPhone 16 and 16 Plus, and the higher-end iPhone 16 Pro and 16 Pro Max. 
+                        <br>For this we are making a special offer.
+                    </p>
+                </div>
+                <div class="main_image">
+                    <img src="image/phones.png">
+                </div>
+            </div>
+            
+            <div class="social_icon">
+                <a href="https://www.facebook.com/apple" target="_blank" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/Apple" target="_blank" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/apple" target="_blank" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/apple" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="button">
+            <a href="../offer/offer.html" id="offer_dis">Special Offer</a>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </section>
+
+
+    <!--Products-->
+
+    <div class="products" id="Products">
+        <h1>Products</h1>
+        <div class="box" id="products_container"></div>
+        <div class="center-btn-container">
+            <button class="product_btn" onclick="window.location.href='../products/product.html'">See More</button>
+        </div>
+    </div>
+    
+    <script src="../products/product.js"></script>
+
+    <!--About-->
+
+    <div class="about" id="About">
+        
+        <h1>Web<span>About</span></h1>
+
+        <div class="about_main">
+            <div class="about_image">
+                <div class="about_small_image">
+                    <img src="image/iphone16(1).png" id="Iphone 17 Pro Max" alt="Iphone 17 Pro Max" onclick="functio(this)">
+                    <img src="image/iphone16(2).png" onclick="functio(this)">
+                    <img src="image/iphone16(3).png" onclick="functio(this)">
+                    <img src="image/iphone16(4).png" onclick="functio(this)">
+                </div>
+                <div class="image_contaner">
+                    <img src="image/iphone16(1).png" id="imagebox">
+                </div>
+
+            </div>
+
+            <div class="about_text">
+                <p>
+                    The iPhone 16 Pro Max, Apple's latest flagship, boasts a sleek design with a wider color palette, a powerful A18 Bionic chip, 
+                    and an improved dual-lens camera system with a 48MP main sensor and 2x optical zoom. Its 6.1-inch Super Retina XDR OLED display supports HDR10 and Dolby Vision, while the larger battery offers up to 22 hours of video playback.
+                    Additional features include Wi-Fi 7, a USB-C port, an Action button, Spatial audio, and Emergency SOS via satellite.
+                </p>
+            </div>
+
+        </div>
+
+        <button class="about_btn" id="dis" onclick="addToCart('Iphone 16 Pro Max', '1000', 'Black')" disabled>Add to Cart</button>
+
+        <script>
+            function functio(small){
+                var full = document.getElementById("imagebox")
+                full.src = small.src
+            }
+        </script>
+        
+    </div>
+
+    <!--Review-->
+    
+    <div class="review" id="Review">
+        <h1>Customer's<span>review</span></h1>
+        <div class="container-card">
+            <div class="card">
+                <div class="card-image">
+                    <img src="image/girl_dp1.jpg" alt="Ranidi Lochan">
+                </div>
+                <div class="card-content">
+                    <div class="card-name">Sandy Lochan</div>
+                    <div class="card-rating">★★★★★</div>
+                    <div class="card-text">"Good value for money, and it does what it promises, but there’s room for improvement in the design. The product performs well, but the aesthetics could use a little more polish. That said, I’m satisfied with my purchase and would recommend it."</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="image/man_dp1.jpg" alt="Ranidi Lochan">
+                </div>
+                <div class="card-content">
+                    <div class="card-name">Sayuru Tharanga</div>
+                    <div class="card-rating">★★★★★</div>
+                    <div class="card-text">"I’ve been using this for a few weeks now, and I’m really impressed! It was easy to set up, and the performance is excellent. It’s a solid investment, and I’m very happy with my purchase."</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="image/gir_dp2.jpg" alt="Ranidi Lochan">
+                </div>
+                <div class="card-content">
+                    <div class="card-name">Sarah Hajj</div>
+                    <div class="card-rating">★★★★</div>
+                    <div class="card-text">"The product works as promised, but it didn't quite live up to my expectations. While it's decent, I was hoping for a bit more functionality for the price. It's fine for basic use, but I’ve seen better options in the same price range."</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-card">
+            <div class="card">
+                <div class="card-image">
+                    <img src="image/gir_dp3.jpg" alt="Ranidi Lochan">
+                </div>
+                <div class="card-content">
+                    <div class="card-name">Celine Al-Hourani</div>
+                    <div class="card-rating">★★★★★</div>
+                    <div class="card-text">"I was a bit skeptical at first, but this product has completely won me over. The design is sleek, and it's incredibly easy to set up. I’m extremely happy with the performance and would buy again in a heartbeat."</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="image/man_dp2.jpg" alt="Ranidi Lochan">
+                </div>
+                <div class="card-content">
+                    <div class="card-name">Tony Ayoub</div>
+                    <div class="card-rating">★★★</div>
+                    <div class="card-text">"Great product overall, but I wish the battery lasted a bit longer. It’s super convenient and easy to use, but I find myself charging it more often than expected. Still, I would definitely recommend it to anyone looking for a reliable option."</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="image/man_dp3.jpg" alt="Ranidi Lochan">
+                </div>
+                <div class="card-content">
+                    <div class="card-name">Ahmad Ali</div>
+                    <div class="card-rating">★★★★</div>
+                    <div class="card-text">"Absolutely love this product! The quality is top-notch, and it has exceeded all my expectations. I use it every day, and it's been a game-changer for my routine."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Services-->
+
+    <div class="services" id="Servises">
+        <h1>our<span>services</span></h1>
+
+        <div class="services_cards">
+            <div class="services_box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>10 Days Replacement</h3>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24 x 7 Support</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+
+    <div class="footer" id="content">
+        <div class="container">
+            <div class="footer_container">
+                <div class="about_us">
+                    <h2><img src="./image/name.png" alt=""></h2>
+                    <p>
+                    Don't miss out on our exclusive range of top-quality products! Shop now and experience the best in innovation and performance.
+                    </p>
+                </div>
+                <div class="opening_hours">
+                    <h2>Opening Hours</h2>
+                    <p class="day">MON-FRI: <span>--------10.00 AM 9.00 PM</span></p>
+                    <p class="day">SAT-SUN: <span>--------10.00 AM 12.00 PM</span></p>
+                </div>
+                <div class="content_us">
+                    <h2>Content Us</h2>
+                    <div class="content">
+                        <p class="phone">Phone:</p>
+                        <span>+961 01283989</span>
+                    </div>
+                    <div class="content">
+                        <p class="add">Add:</p>
+                        <span>Beirut City Centre</span>
+                    </div>
+                    <div class="content">
+                        <p class="email">Email:</p>
+                        <span>Iphone@Iphone.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shape">
+        <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+            <div class="chevron">▼</div>
+        </a>
+    </div>
+    <script src="script.js"></script>
+    
+    <script>
+        function navigateToWishlist() {
+            window.location.href = "../wishlist/wishlist.html"; // Redirect to wishlist page
+        }
+    </script>
+</body>
+
+<script src="../wishlist/wishlist.html"></script>
+<script src="../offer/offer.js"></script>
+</html>

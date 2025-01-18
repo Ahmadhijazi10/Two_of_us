@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./product.css">
+    <link rel="shortcut icon" href="image/producticon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Products</title>
+</head>
+<body>
+    <!-- header -->
+    <section>
+        <nav>
+            <div class="logo">
+                <a href="../home/index.html"><h1>Iphon<span>e</span></h1></a>
+            </div>
+
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search for a product..." />
+                <button id="search-button">Search</button>
+            </div>
+        
+            <div class="icons">
+                <button id="whishlist-icon" class="res" onclick="navigateToWishlist()">
+                    <i class="fa-solid fa-heart" id="heart-btn"></i>
+                </button>
+                <button id="cart-icon" class="res" onclick="navigateToCart()">
+                    <i class="fa-solid fa-cart-shopping" id="heart-btn"></i>
+                </button>
+                <i class="fa-solid fa-user" id="icon"></i>
+            </div>
+        </nav>
+        
+        <div id="buttonContainer">
+            <a href="../login/login.html" class="btn-login" id="loginButton">Login</a>
+            <a href="../register/register.html" class="btn-login" id="registerButton">Register</a>
+            <span id="usernameDisplay" style="display: none;">Welcome,<br> <span id="username"></span></span>
+            <a href="../home/index.html" class="btn-login" id="logoutButton" style="display: none;">Logout</a>
+        </div>
+
+        <button id="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    </section>
+
+    <!-- side bar -->
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><button onclick="sortProducts('price', 'asc')">Sort by Price (Increasing)</button></li>
+            <li><button onclick="sortProducts('price', 'desc')">Sort by Price (Decreasing)</button></li>
+            <li><button onclick="sortProducts('rating', 'asc')">Sort by Rating (Increasing)</button></li>
+            <li><button onclick="sortProducts('rating', 'desc')">Sort by Rating (Decreasing)</button></li>
+        </ul>
+    </div>
+    
+
+    <!-- product -->
+    <div class="products" id="Products">
+        <h1>Products</h1>
+        <div class="social_product">
+            <div class="social_icon">
+                <a href="https://www.facebook.com/apple" target="_blank" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/Apple" target="_blank" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/apple" target="_blank" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/apple" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="box" id="products_container"></div>
+        </div>
+    </div>
+
+    <div class="shape">
+        <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+            <div class="chevron">▼</div>
+        </a>
+    </div>
+
+    <script>
+        function navigateToWishlist() {
+            window.location.href = "../wishlist/wishlist.html"; // Redirect to wishlist page
+        }
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+
+    <script src="./allproduct.js"></script>   
+    <script src="../home/script.js"></script>
+    <script src="../wishlist/wishlist.js"></script>
+</body>
+</html>
