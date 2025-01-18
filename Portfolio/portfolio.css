@@ -89,11 +89,11 @@ section {
     margin-bottom: 15px;
 }
 
-.projects {
+.Projects {
     background: rgb(0, 123, 255);
 }
 
-.projects h2{
+.Projects h2{
     text-align: center;
     text-decoration: underline;
 }
