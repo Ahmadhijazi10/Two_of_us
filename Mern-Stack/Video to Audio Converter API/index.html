@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video to Audio Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      margin: 20px 0;
+    }
+
+    input[type="file"] {
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Video to Audio Converter</h1>
+  <form id="uploadForm">
+    <input type="file" id="videoFile" accept="video/*" required>
+    <button type="submit">Convert to MP3</button>
+  </form>
+  <div id="message" class="message"></div>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const videoFile = document.getElementById('videoFile').files[0];
+      const messageDiv = document.getElementById('message');
+      messageDiv.textContent = ''; // Clear previous messages
+
+      if (!videoFile) {
+        messageDiv.className = 'message error';
+        messageDiv.textContent = 'Please select a video file.';
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('video', videoFile);
+
+      try {
+        const response = await fetch('http://localhost:5000/api/convert', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          const blob = await response.blob();
+          const downloadLink = document.createElement('a');
+          downloadLink.href = URL.createObjectURL(blob);
+          downloadLink.download = 'converted_audio.mp3';
+          downloadLink.textContent = 'Click here to download the converted MP3';
+          downloadLink.className = 'success';
+
+          messageDiv.appendChild(downloadLink);
+        } else {
+          messageDiv.className = 'message error';
+          messageDiv.textContent = 'Conversion failed. Please try again.';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        messageDiv.className = 'message error';
+        messageDiv.textContent = 'An error occurred. Please check the server and try again.';
+      }
+    });
+  </script>
+</body>
+</html>

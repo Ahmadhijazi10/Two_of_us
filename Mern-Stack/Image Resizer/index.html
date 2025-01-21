@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Resizer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      text-align: left;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .result {
+      margin-top: 20px;
+    }
+
+    .result img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Resize Your Image</h1>
+    <form id="resizeForm" enctype="multipart/form-data">
+      <label for="image">Choose an image</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+      
+      <label for="width">Width (px):</label>
+      <input type="number" id="width" name="width" required>
+
+      <label for="height">Height (px):</label>
+      <input type="number" id="height" name="height" required>
+
+      <button type="submit">Resize Image</button>
+    </form>
+
+    <div id="result" class="result hidden">
+      <h2>Resized Image</h2>
+      <img id="resizedImage" src="" alt="Resized Image">
+      <a id="downloadLink" href="" download="resized_image.jpg">Download Resized Image</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('resizeForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const imageInput = document.getElementById('image');
+      const widthInput = document.getElementById('width');
+      const heightInput = document.getElementById('height');
+
+      const formData = new FormData();
+      formData.append('image', imageInput.files[0]);
+      formData.append('width', widthInput.value);
+      formData.append('height', heightInput.value);
+
+      try {
+        const response = await fetch('http://localhost:5000/api/resize', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to resize image');
+        }
+
+        const blob = await response.blob();
+        const resizedImageURL = URL.createObjectURL(blob);
+
+        const resultDiv = document.getElementById('result');
+        resultDiv.classList.remove('hidden');
+
+        document.getElementById('resizedImage').src = resizedImageURL;
+        document.getElementById('downloadLink').href = resizedImageURL;
+
+      } catch (error) {
+        alert(error.message);
+      }
+    });
+  </script>
+</body>
+</html>
