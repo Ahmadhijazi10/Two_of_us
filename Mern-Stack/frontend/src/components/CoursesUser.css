@@ -1,0 +1,70 @@
+.courses-container {
+  padding: 20px;
+  max-width: auto;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.courses-container .title {
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.courses-container .search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.courses-container .courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.courses-list .course-box {
+  width: 250px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.courses-list .course-box h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.courses-list .course-box p {
+  margin: 5px 0;
+}
+
+.courses-list .students-count {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.courses-list .add-btn,
+.courses-list .drop-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.courses-list .add-btn {
+  background: green;
+  color: white;
+}
+
+.courses-list .drop-btn {
+  background: red;
+  color: white;
+}

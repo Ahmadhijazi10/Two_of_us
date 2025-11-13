@@ -1,0 +1,191 @@
+/* General Container Styling */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Section Content Styling */
+.education-container .education-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.education-container .education-image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.education-container .education-text {
+  width: 50%;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: left; 
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+/* Heading Styling */
+.education-container .text-danger {
+  color: #dc3545;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Separator Styling */
+.education-container .separator {
+  width: 80%;
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 40px 0;
+}
+
+/* Apply Button */
+.education-container .apply-button {
+  background-color: #dc3545;
+  color: white;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.education-container .apply-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.education-container .apply-button:hover {
+  background-color: #bb2d3b;
+}
+
+/* Contact Us Section */
+.education-container .contact-us {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.education-container .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.education-container .contact-info {
+  flex: 1;
+  margin: 10px;
+  text-align: left;
+}
+
+.education-container .contact-info h2 {
+  font-size: 2.5rem;
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.education-container .contact-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #666;
+}
+
+.education-container .contact-logo {
+  text-align: center;
+}
+
+.education-container .harvard-logo {
+  max-width: 200px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+/* Social Media Section */
+.education-container .social-media {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.education-container .social-media-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-container .social-media h2 {
+  font-size: 2rem;
+  color: #990000;
+  margin-bottom: 10px;
+}
+
+.education-container .social-media p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.education-container .social-media a {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.education-container .social-media a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Section */
+.education-container .footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .education-container .education-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .education-container .education-image {
+    width: 100%;
+  }
+
+  .education-container .education-text {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-container .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .education-container .harvard-logo {
+    margin: 20px auto;
+  }
+}

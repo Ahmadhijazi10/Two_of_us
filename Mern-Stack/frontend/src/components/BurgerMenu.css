@@ -1,0 +1,78 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #990000;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-container.open {
+  left: 0;
+}
+
+.menu-container .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-container .menu-item {
+  margin: 15px 0;
+}
+
+.menu-container .menu-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-container .menu-link:hover {
+  text-decoration: underline;
+}
+
+.menu-container .login-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Dropdown Menu */
+.menu-container .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 150px;
+  right: 50px;
+}
+
+.menu-container .dropdown-content .dropdown-item {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.menu-container .dropdown-content .dropdown-item:hover {
+  background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.menu-container .login-dropdown:hover .dropdown-content {
+  display: block;
+}

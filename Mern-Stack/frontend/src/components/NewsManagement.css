@@ -1,0 +1,118 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* News Management Section */
+.create-news {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-news input,
+.create-news textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.create-news button {
+  background-color: #990000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-news button:hover {
+  background-color: #520202;
+}
+
+/* News Table */
+.user-table-Man {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table-Man th,
+.user-table-Man td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.user-table-Man th {
+  background-color: #000;
+  color: white;
+}
+
+.user-table-Man td {
+  background-color: #fff;
+}
+
+.user-table-Man button {
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.user-table-Man td button.edit {
+  background-color: #28a745;
+}
+
+.user-table-Man td button.delete {
+  background-color: #dc3545;
+}
+.user-table-Man td button.save {
+  background-color: #28a745;
+}
+
+.user-table-Man td button.cancel {
+  background-color: #dc3545;
+}
+
+/* Input styles for editing */
+input,
+textarea {
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type="text"] {
+  max-width: 300px;
+}
+
+textarea {
+  height: 150px;
+}

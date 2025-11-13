@@ -1,0 +1,79 @@
+/* General Container */
+.profile-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.profile-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Profile Details */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Row */
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Label */
+.profile-label {
+  font-weight: 500;
+  color: #555;
+  flex: 1;
+}
+
+/* Value / Input Field */
+.profile-value {
+  flex: 2;
+  text-align: left;
+  color: #222;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Button */
+.profile-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  background: #990000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-button:hover {
+  background: #520202;
+}

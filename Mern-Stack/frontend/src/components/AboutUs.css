@@ -1,0 +1,143 @@
+/* Main Container */
+.about-container {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Image */
+.about-container .hero-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Separator */
+.about-container .parent-container {
+  display: flex;
+  justify-content: center; /* Center the child element horizontally */
+}
+
+.about-container .separator {
+  width: 80%; /* Or any preferred width */
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* About Content Sections */
+.about-container .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  align-items: center;
+}
+
+.about-container .image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.about-container .text-section {
+  flex: 1.5;
+}
+
+.about-container .text-section h2 {
+  font-size: 2.2em;
+  color: #990000;
+  margin-bottom: 20px;
+}
+
+.about-container .text-section p,
+.about-container .text-section ul {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.about-container .text-section a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.about-container .text-section a:hover {
+  text-decoration: underline;
+}
+
+.about-container .text-section .question {
+  color: #990000;
+  margin: 15px 0 5px;
+}
+
+.about-container .text-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-container .text-section ul li {
+  margin-bottom: 10px;
+}
+
+.about-container .about-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+/* Contact Us Section */
+.about-container .contact-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about-container .contact-content h2 {
+  font-size: 2rem;
+  color: #990000;
+}
+
+.about-container .contact-content p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.about-container .contact-content .harvard-logo {
+  margin-top: 20px;
+  max-width: 120px;
+  height: auto;
+}
+
+/* Social Media Section */
+.about-container .social-media-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-container .social-media-section h2 {
+  font-size: 1.8rem;
+  color: #990000;
+  margin-bottom: 10px;
+}
+
+.about-container .social-media-section p a {
+  font-size: 1.2rem;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.about-container .social-media-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container .about-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-container .image-section,
+  .about-container .text-section {
+    padding: 10px;
+  }
+
+  .about-container .hero-image {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,103 @@
+/* CoursesPage.css */
+
+.courses-container {
+  padding: 20px;
+  max-width: auto;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.add-course-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.course-input {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #990000;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #520202;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.course-box {
+  width: 250px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.course-box h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.course-box p {
+  margin: 5px 0;
+}
+
+.students-count {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.edit-btn {
+  background: green;
+  color: white;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+}

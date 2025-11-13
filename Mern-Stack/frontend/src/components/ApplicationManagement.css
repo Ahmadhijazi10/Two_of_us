@@ -1,0 +1,78 @@
+/* ApplicationManagement.css */
+
+.application-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .application-table th,
+  .application-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .application-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .application-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .application-table td button {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .application-table td button.delete {
+    background-color: #dc3545;
+  }
+  
+  .application-table td button:hover {
+    opacity: 0.8;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 70px; /* Adjust to move the button further right */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue; /* Blue background */
+    color: white;            /* White text */
+    border: none;            /* Remove border */
+    border-radius: 5px;      /* Optional: Rounded corners */
+    cursor: pointer;         /* Change the cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform */
+  }
+  
+  .back-button:hover {
+    background-color: rgb(77, 77, 155); /* Darker blue on hover */
+    transform: scale(1.05);      /* Slightly increase the size on hover */
+  }
+  
+  

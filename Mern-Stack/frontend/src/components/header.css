@@ -1,0 +1,115 @@
+/* General Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #990000;
+  color: white;
+  padding: 10px 20px;
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .header-title {
+  text-decoration: none;
+}
+
+.header .header-title h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header .header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header .menu-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header .menu-link:hover {
+  text-decoration: underline;
+}
+
+/* Burger Icon */
+.header .burger-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+/* Login Dropdown */
+.header .login-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.header .login-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Dropdown Menu */
+.header .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 150px;
+  right: 0;
+}
+
+.header .dropdown-content .dropdown-item {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.header .dropdown-content .dropdown-item:hover {
+  background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.header .login-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .header .header-nav {
+    display: none; /* Hide navigation items by default */
+    flex-direction: column; /* Stack menu items vertically */
+    background-color: #990000;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .header .header-nav.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .header .burger-icon {
+    display: block; /* Show burger icon on small screens */
+  }
+}
